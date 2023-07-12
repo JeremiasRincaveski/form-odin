@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Odin Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="leftSide">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo do project odin">
+        <p>odin</p>
+      </div>
+    </div>
+    
+    <div class="rightSide">
+      <div class="description">
+        <p>
+          This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.
+        </p>
+        <p>
+          You <span>know</span> you want to.
+        </p>
+      </div>
+
+      <form>
+        <legend>Let's do this!</legend>
+
+        <fieldset>
+          <div class="fname input">
+            <label for="fname">First Name</label>
+            <input required type="text" id="fname" name="fname" >
+            <span></span>
+          </div>
+  
+          <div class="lname input">
+            <label for="lname">Last Name</label>
+            <input required type="text" id="lname" name="lname">
+            <span></span>
+          </div>
+  
+          <div class="email input">
+            <label for="email">Email</label>
+            <input required pattern="[a-zA-Z0-9]{4,}@[a-z]{2,}\.[a-z]{2,}(\.[a-z]*)?" type="email" id="email" name="email">
+            <span></span>
+          </div>
+  
+          <div class="number input">
+            <label for="number">phone number</label>
+            <input required type="text" id="number" name="number">
+            <span></span>
+          </div>
+  
+          <div class="password input">
+            <label for="password">password</label>
+            <input required type="password" id="password" name="password">
+            <span></span>
+          </div>
+  
+          <div class="password input">
+            <label for="passwordConfirm">confirm password</label>
+            <input required type="password" id="passwordConfirm" name="passwordConfirm">
+            <span></span>
+          </div>
+        </fieldset>
+      </form>
+
+      <div class="login">
+        <button type="submit">create account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

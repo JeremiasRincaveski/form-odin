@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'Norse Bold';
+  src: url(fonts/Norse-Bold.otf) format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+
+  @media screen and (max-width: 866px) {
+    flex-direction: column;
+  }
+}
+
+.leftSide {
+  align-items: center;
+  background: url(./images/fundo.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  position: relative;
+  width: 450px;
+
+  @media screen and (max-width: 866px) {
+    display: none;
+  }
+}
+
+.logo {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 10rem;
+  width: 100%;
+}
+
+.logo img {
+  height: 6rem;
+  width: 5rem;
+}
+
+.logo p {
+  font-family: 'Norse Bold';
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.rightSide {
+  align-items: flex-start;
+  background-color: rgb(249, 250, 251);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  width: max(1200px, 300px);
+
+  @media screen and (max-width: 866px) {
+    width: 100%;
+  }
+}
+
+.description {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0 2rem;
+  width: min(600px, 100%);
+}
+
+form {
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  width: max(300px, 100%);
+}
+
+legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+fieldset {
+  align-items: center;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  width: min(600px, 100%);
+}
+
+.input {
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: min(80%, 250px);
+  margin-bottom: 2rem;
+}
+
+.input.invalido {
+  border: 2px solid rgb(209, 106, 106);
+}
+
+/* .input:nth-child(even) {
+  margin-left: auto;
+
+  @media screen and (max-width: 1050px) {
+   margin: 0; 
+  }
+} */
+
+.input label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  left: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.input:has(input:focus) label, .input:has(.valido) label {
+  font-size: .8rem;
+  transform: translateY(-1.5rem) translateX(-0.5rem);
+}
+
+.input input {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  padding:  .2rem 0 .2rem .5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.input input:focus{
+  outline: 2px solid blue;
+}
+
+.input > span {
+  position: absolute;
+  left: 0rem;
+  color: red;
+  bottom: -1rem;
+  font-size: .7rem;
+}
+
+.login {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 500;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+.login > button {
+  border: none;
+  background-color: rgb(89, 109, 72);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  text-transform: capitalize;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+
+.login  a:active {
+  color: rgb(89, 109, 72);
+}
+
+.login a {
+  color: rgb(89, 109, 72);
+}
